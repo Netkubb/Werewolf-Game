@@ -22,8 +22,8 @@ A browser-based implementation of the classic social deduction game "Werewolf" (
 1. **Clone the Repository**:
 
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-folder>
+    git clone https://github.com/Netkubb/Werewolf-Game.git
+    cd Werewolf-Game
     ```
 
 2. **Install Dependencies**:
