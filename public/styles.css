@@ -1,0 +1,293 @@
+/* Reset basic elements */
+body, h1, h2, h3, p, ul, li, button, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Arial", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Default styling (no mode) */
+body {
+    background: #f0f0f0; /* light grey background */
+    color: #333;         /* dark grey text */
+    transition: background 0.5s, color 0.5s;
+}
+
+/* Day/Night Modes on body */
+.day-mode {
+    background: #ffffff;
+    color: #222;
+}
+
+.night-mode {
+    background: #1c1c1c;
+    color: #eee;
+}
+
+/* Container */
+.container {
+    width: 95%;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    padding: 20px;
+    transition: background 0.5s, color 0.5s;
+    background: #eee; /* Default: light grey container */
+    color: #333;       /* Default: dark text */
+}
+
+/* Container in modes */
+.day-mode .container {
+    background: #f8f8f8;
+    color: #222;
+}
+
+.night-mode .container {
+    background: #2a2a2a;
+    color: #eee;
+}
+
+/* Header */
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: color 0.5s;
+    color: #333; /* Default dark text */
+}
+
+.day-mode header h1 {
+    color: #222;
+}
+
+.night-mode header h1 {
+    color: #eee;
+}
+
+/* Sections */
+section {
+    margin-bottom: 30px;
+}
+
+h2, h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    transition: color 0.5s;
+    color: #333; /* Default heading color */
+}
+
+.day-mode h2, .day-mode h3 {
+    color: #222;
+}
+
+.night-mode h2, .night-mode h3 {
+    color: #eee;
+}
+
+/* Status and instructions */
+.status-message {
+    background: #444;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #ddd; /* Readable on dark background */
+}
+
+.instruction-box {
+    background: #3b3b3b; 
+    color: #ddd;         /* Default: light text on dark box */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-weight: 500;
+    min-height: 50px;
+    transition: background 0.5s, color 0.5s;
+}
+
+.day-mode .instruction-box {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.night-mode .instruction-box {
+    background: #3b3b3b;
+    color: #ddd;
+}
+
+.instruction-text {
+    margin: 10px 0;
+}
+
+/* Inputs and buttons */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#playerName {
+    flex: 1;
+    padding: 10px;
+    background: #ccc;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #555;
+    transition: background 0.5s, color 0.5s;
+}
+
+#playerName:focus {
+    outline: none;
+    border-color: #777;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s, color 0.5s;
+    background: #555;
+    color: #fff;
+}
+
+button:hover {
+    background: #666;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Buttons in modes */
+.day-mode button {
+    background: #ddd;
+    color: #000;
+}
+
+.night-mode button {
+    background: #333;
+    color: #fff;
+}
+
+/* Info bar: shows role and phase */
+.info-bar {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.info-item {
+    background: #3a3a3a;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    transition: background 0.5s, color 0.5s;
+    color: #eee; /* Default light text on dark background */
+}
+
+/* Info-item in modes */
+.day-mode .info-item {
+    background: #e0e0e0;
+    color: #222;
+}
+
+.night-mode .info-item {
+    background: #3a3a3a;
+    color: #eee;
+}
+
+.role {
+    color: #ffd700; /* gold for role */
+}
+
+.phase {
+    color: #87cefa; /* skyblue for phase */
+}
+
+/* Player and action lists */
+.player-list, .action-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.player-list li, .action-list li {
+    background: #3a3a3a;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #eee; /* light text on dark background */
+}
+
+.player-list li:hover, .action-list li:hover {
+    background: #4a4a4a;
+}
+
+.player-list li:active, .action-list li:active {
+    transform: scale(0.98);
+}
+
+/* Player/Action lists in day-mode */
+.day-mode .player-list li, .day-mode .action-list li {
+    background: #ddd;
+    color: #000;
+}
+
+.day-mode .player-list li:hover, .day-mode .action-list li:hover {
+    background: #ccc;
+}
+
+/* Player/Action lists in night-mode */
+.night-mode .player-list li, .night-mode .action-list li {
+    background: #3a3a3a;
+    color: #eee;
+}
+
+/* Dead player styling - remove :contains as it's not standard CSS
+   Instead, you can apply a class to dead players server-side or script-side */
+li.dead {
+    color: #888 !important;
+}
+
+/* Highlighting selected targets */
+.selected-target {
+    background-color: #555;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+}
+
+.selected-target-day {
+    background-color: #666;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #aaa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .info-bar {
+        flex-direction: column;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    #playerName {
+        width: 100%;
+    }
+}
