@@ -18,7 +18,9 @@ let seerTarget = null;
 let seerDiscoveries = {};
 let votes = [];
 let dayVoters = new Set(); // Track which players have voted this day
-let roles = fs.readFileSync("roles.txt", "utf-8").trim().split("\r\n");
+let roles = fs.readFileSync("roles.txt", "utf-8").trim().split("\n");
+// for each role clean \r
+roles = roles.map((role) => role.replace("\r", ""));
 console.log(roles);
 // roles now is an array like ["werewolf", "werewolf", "bodyguard", "seer", "villager", "villager", "villager"]
 let requiredPlayers = roles.length;
